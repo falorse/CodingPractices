@@ -12,6 +12,7 @@
  */
 
 #include <cstdlib>
+#include "AddElectricalWires.h"
 
 using namespace std;
 
@@ -19,6 +20,18 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
+    AddElectricalWires aew;
+    vector<string> wires;
+    vector<int> gridConnections;
+    wires.push_back("01000");
+    wires.push_back("10100");
+    wires.push_back("01010");
+    wires.push_back("00100");
+    wires.push_back("00000");
+    gridConnections.push_back(2);
+    gridConnections.push_back(4);
+    
+    cout << aew.maxNewWires(wires,gridConnections) << endl;
     return 0;
 }
 

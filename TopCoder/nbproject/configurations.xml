@@ -3,10 +3,12 @@
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="SourceFiles" displayName="ソース・ファイル" projectFiles="true">
       <itemPath>Aaagmnrs.cpp</itemPath>
+      <itemPath>AddElectricalWires/AddElectricalWires.cpp</itemPath>
       <itemPath>AlienAndHumbergers.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="HeaderFiles" displayName="ヘッダー・ファイル" projectFiles="true">
+      <itemPath>AddElectricalWires.h</itemPath>
       <itemPath>newfile</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles" displayName="リソース・ファイル" projectFiles="true">
@@ -40,6 +42,13 @@
       <compileType>
       </compileType>
       <item path="Aaagmnrs.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AddElectricalWires.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AddElectricalWires/AddElectricalWires.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
       </item>
       <item path="AlienAndHumbergers.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -86,6 +95,13 @@
         </asmTool>
       </compileType>
       <item path="Aaagmnrs.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AddElectricalWires.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AddElectricalWires/AddElectricalWires.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
       </item>
       <item path="AlienAndHumbergers.cpp" ex="false" tool="1" flavor2="0">
       </item>

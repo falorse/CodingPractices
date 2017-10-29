@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Aaagmnrs.o \
+	${OBJECTDIR}/AddElectricalWires/AddElectricalWires.o \
 	${OBJECTDIR}/AlienAndHumbergers.o \
 	${OBJECTDIR}/main.o
 
@@ -79,6 +80,11 @@ ${OBJECTDIR}/Aaagmnrs.o: Aaagmnrs.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Aaagmnrs.o Aaagmnrs.cpp
 
+${OBJECTDIR}/AddElectricalWires/AddElectricalWires.o: AddElectricalWires/AddElectricalWires.cpp
+	${MKDIR} -p ${OBJECTDIR}/AddElectricalWires
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AddElectricalWires/AddElectricalWires.o AddElectricalWires/AddElectricalWires.cpp
+
 ${OBJECTDIR}/AlienAndHumbergers.o: AlienAndHumbergers.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -118,6 +124,19 @@ ${OBJECTDIR}/Aaagmnrs_nomain.o: ${OBJECTDIR}/Aaagmnrs.o Aaagmnrs.cpp
 	    $(COMPILE.cc) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Aaagmnrs_nomain.o Aaagmnrs.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/Aaagmnrs.o ${OBJECTDIR}/Aaagmnrs_nomain.o;\
+	fi
+
+${OBJECTDIR}/AddElectricalWires/AddElectricalWires_nomain.o: ${OBJECTDIR}/AddElectricalWires/AddElectricalWires.o AddElectricalWires/AddElectricalWires.cpp 
+	${MKDIR} -p ${OBJECTDIR}/AddElectricalWires
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/AddElectricalWires/AddElectricalWires.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AddElectricalWires/AddElectricalWires_nomain.o AddElectricalWires/AddElectricalWires.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/AddElectricalWires/AddElectricalWires.o ${OBJECTDIR}/AddElectricalWires/AddElectricalWires_nomain.o;\
 	fi
 
 ${OBJECTDIR}/AlienAndHumbergers_nomain.o: ${OBJECTDIR}/AlienAndHumbergers.o AlienAndHumbergers.cpp 
